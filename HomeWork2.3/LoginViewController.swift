@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func logInButton() {}
+    @IBAction func logInButton() {
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
@@ -60,7 +61,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPassword() {
         
-        let alert = UIAlertController(title: "Oops!", message: "Your name is \(password)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops!", message: "Your password is \(password)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true)
         
