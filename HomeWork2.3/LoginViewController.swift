@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
     let userName = "Alex"
     let password = "Paris"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +28,26 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func logInButton() {
+    @IBAction func logInButton() {}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        
+        if userNameTextField.text == userName, passwordTextField.text == password {
+            welcomeVC.newWelcome = userName
+        } else {
+            let alert = UIAlertController(title: "Oops!", message: "The username or password is not correct, don't worry, try again 😀", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+        }
+        
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+       
     }
     
     @IBAction func forgotNameUser() {
@@ -41,9 +59,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPassword() {
+        
         let alert = UIAlertController(title: "Oops!", message: "Your name is \(password)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true)
+        
     }
 }
 
