@@ -22,7 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsg-EW-S3y"/>
-                                    <segue destination="M2x-GA-e2z" kind="show" id="ORm-R6-YHl"/>
+                                    <segue destination="M2x-GA-e2z" kind="presentation" modalPresentationStyle="fullScreen" id="mR8-Ra-mYz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-YZ-jb8">
@@ -91,26 +91,26 @@
             <objects>
                 <viewController id="M2x-GA-e2z" customClass="WelcomeViewController" customModule="HomeWork2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fIi-Be-S6T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="8yZ-eZ-LrK">
-                                <rect key="frame" x="20" y="231" width="374" height="341"/>
+                                <rect key="frame" x="20" y="275" width="374" height="351"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njr-zD-8qC">
-                                        <rect key="frame" x="158.5" y="0.0" width="57" height="55"/>
+                                        <rect key="frame" x="158.5" y="0.0" width="57" height="58.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0T-aa-Ms9">
-                                        <rect key="frame" x="154.5" y="143" width="65" height="55"/>
+                                        <rect key="frame" x="154.5" y="146.5" width="65" height="58"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBm-UP-4Rt">
-                                        <rect key="frame" x="164" y="286" width="46" height="55"/>
+                                        <rect key="frame" x="164" y="292.5" width="46" height="58.5"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="8qV-i9-1td" kind="unwind" unwindAction="unwindFor:" id="AOW-We-pcm"/>
