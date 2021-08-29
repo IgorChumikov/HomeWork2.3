@@ -18,7 +18,6 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backButton.setTitle("Log out", for: .normal)
         welcomeLabel.text = "Welcome, \(newWelcome)"
 
     }
